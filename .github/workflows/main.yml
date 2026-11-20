@@ -62,6 +62,11 @@ jobs:
     permissions: 
       packages: write
     steps:
+      - name: Download code
+        uses: actions/download-artifact@v4
+        with:
+          name: code
+          path: .
       - name: Execute component test
         run: bash ci/component-test.sh
   Performance-test:
@@ -70,6 +75,11 @@ jobs:
     permissions: 
       packages: write
     steps:
+      - name: Download code
+        uses: actions/download-artifact@v4
+        with:
+          name: code
+          path: .
       - name: Performance tests
         run: bash ci/performance-test.sh
       
