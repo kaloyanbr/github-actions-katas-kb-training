@@ -46,6 +46,8 @@ jobs:
     permissions: 
       packages: write
     steps:
+      - name: Clone down repository
+        uses: actions/checkout@v3
       - name: build docker
         run: bash ci/build-docker.sh
       - name: push docker
