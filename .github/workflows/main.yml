@@ -48,6 +48,9 @@ jobs:
     steps:
       - name: Download repository
         uses: actions/download-artifact@v4
+        with:
+          name: code
+          path: .
       - name: build docker
         run: bash ci/build-docker.sh
       - name: push docker
