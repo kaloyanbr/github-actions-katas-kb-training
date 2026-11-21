@@ -2,12 +2,12 @@
 
 name: Main workflow
 
-# Controls when the workflow will run
-on: push
 env: #Set the secret as an input
   github_username: ${{ github.actor }}
   github_password: ${{ secrets.GITHUB_TOKEN }} # Must be made available to the workflow
   GIT_COMMIT: ${{ github.sha }}
+# Controls when the workflow will run
+on: push
   # Triggers the workflow on push or pull request events but only for the "main" branch
 jobs:
   Build:
