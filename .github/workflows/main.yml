@@ -115,7 +115,7 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: https://sonarcloud.io
-          SONAR_SCANNER_OPTS: "-Dsonar.projectKey=github-actions-katas-kb-training -Dsonar.organization=kaloyanbr"
+          SONAR_SCANNER_OPTS: "-Dsonar.projectKey=kaloyanbr_github-actions-katas-kb-training -Dsonar.organization=kaloyanbr"
   Docker-image:
     runs-on: ubuntu-latest
     needs: [Build]
