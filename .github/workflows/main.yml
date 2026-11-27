@@ -58,7 +58,7 @@ jobs:
           chmod +x snyk
           mv snyk /usr/local/bin/
       - name: Authenticate Snyk
-        run: snyk auth ${{ secrets.SNYK_TOKEN }}
+        run: snyk auth ${{ secrets.SYNK_TOKEN }}
       - name: Run Snyk test (check for vulnerabilities)
         working-directory: ./app
         run: snyk test --all-projects --severity-threshold=high || true
