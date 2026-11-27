@@ -92,7 +92,7 @@ jobs:
         run: trivy config --severity HIGH,CRITICAL --exit-code 0 .
   SonarCloudScan:
     runs-on: ubuntu-latest
-    needs: [Build]
+    #needs: [Build]
     steps:
       - name: Download code
         uses: actions/download-artifact@v4
